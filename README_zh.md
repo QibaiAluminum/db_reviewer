@@ -52,21 +52,70 @@ db-reviewer/
 
 ## 安装方式
 
+以下命令默认在仓库根目录执行。
+
 先拉取仓库：
 
 ```bash
 git clone https://github.com/QibaiAluminum/db_reviewer.git
 ```
 
-再把 skill 安装到 Codex：
+### 1) Codex
+
+把 skill 安装到 Codex：
 
 ```bash
 SKILL_HOME="${CODEX_HOME:-$HOME/.codex}/skills"
 mkdir -p "$SKILL_HOME"
-cp -R db_reviewer/db-reviewer "$SKILL_HOME/"
+cp -R db-reviewer "$SKILL_HOME/"
 ```
 
 安装完成后重启 Codex，让新 skill 被重新发现。
+
+使用示例：
+
+```text
+Use $db-reviewer to review this database paper PDF for SIGMOD or VLDB.
+```
+
+### 2) CC（Claude Code）
+
+可选择全局安装或项目级安装。
+
+全局安装：
+
+```bash
+mkdir -p "$HOME/.claude/skills"
+cp -R db-reviewer "$HOME/.claude/skills/"
+```
+
+项目级安装：
+
+```bash
+mkdir -p .claude/skills
+cp -R db-reviewer .claude/skills/
+```
+
+使用时建议在提示词中显式指定，例如：
+
+```text
+Please use the db-reviewer skill to review this paper.
+```
+
+### 3) Gemini
+
+可将该技能复制到 Gemini 的技能目录：
+
+```bash
+mkdir -p "$HOME/.gemini/skills"
+cp -R db-reviewer "$HOME/.gemini/skills/"
+```
+
+随后在 Gemini 中直接给出具体任务，例如：
+
+```text
+Review this TeX source tree as a SIGMOD submission and point out the main weaknesses.
+```
 
 ## 使用方式
 

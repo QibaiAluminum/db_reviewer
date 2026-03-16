@@ -57,21 +57,70 @@ db-reviewer/
 
 ## Installation
 
+Assume you are in the repository root.
+
 Clone the repository:
 
 ```bash
 git clone https://github.com/QibaiAluminum/db_reviewer.git
 ```
 
-Install the skill into Codex:
+### 1) Codex
+
+Copy the skill into your Codex skills directory:
 
 ```bash
 SKILL_HOME="${CODEX_HOME:-$HOME/.codex}/skills"
 mkdir -p "$SKILL_HOME"
-cp -R db_reviewer/db-reviewer "$SKILL_HOME/"
+cp -R db-reviewer "$SKILL_HOME/"
 ```
 
 Restart Codex after installation so the new skill is discovered.
+
+Usage example:
+
+```text
+Use $db-reviewer to review this database paper PDF for SIGMOD or VLDB.
+```
+
+### 2) CC (Claude Code)
+
+Use either a global or project-level installation.
+
+Global:
+
+```bash
+mkdir -p "$HOME/.claude/skills"
+cp -R db-reviewer "$HOME/.claude/skills/"
+```
+
+Project-level:
+
+```bash
+mkdir -p .claude/skills
+cp -R db-reviewer .claude/skills/
+```
+
+In prompts, explicitly request this skill, for example:
+
+```text
+Please use the db-reviewer skill to review this paper.
+```
+
+### 3) Gemini
+
+Copy this skill into your Gemini skills directory:
+
+```bash
+mkdir -p "$HOME/.gemini/skills"
+cp -R db-reviewer "$HOME/.gemini/skills/"
+```
+
+Then ask concrete tasks in Gemini, for example:
+
+```text
+Review this TeX source tree as a SIGMOD submission and point out the main weaknesses.
+```
 
 ## Usage
 
