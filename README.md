@@ -15,8 +15,7 @@ The skill now distinguishes between `PDF` submissions and `TeX` source trees:
 - `PDF + TeX` workflow: use the PDF for presentation judgment and use TeX for exact tracing of
   notation, equations, tables, and appendix references.
 
-The review guidance is not ICML-bound. The current defaults are aimed at the kinds of papers you
-would see in:
+This skill is more tailored to the meeting scenarios I commonly use:
 
 - `SIGMOD`
 - `VLDB`
