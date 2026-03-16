@@ -1,0 +1,4 @@
+interface:
+  display_name: "DB Reviewer"
+  short_description: "Review database papers, TeX, SQL, and experiments"
+  default_prompt: "Use $db-reviewer to review a schema, SQL query, benchmark plan, PDF paper, or TeX source tree."
