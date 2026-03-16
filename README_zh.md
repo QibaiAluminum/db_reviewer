@@ -10,7 +10,7 @@
 - `TeX` 工作流：直接检查源码结构、符号定义、宏命令使用，以及 `.tex` 文件中的隐藏指令。
 - `PDF + TeX` 联合工作流：用 PDF 判断 presentation，用 TeX 追踪符号、公式、表格和 appendix 引用的精确出处。
 
-这个 skill 不会默认绑定成 ICML 审稿，而是更偏向你实际会遇到的场景：
+这个 skill 更偏向我本人常用的会议场景：
 
 - `SIGMOD`
 - `VLDB`
