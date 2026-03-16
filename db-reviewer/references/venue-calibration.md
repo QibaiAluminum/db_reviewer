@@ -2,8 +2,7 @@
 
 ## Default Rule
 
-Do not assume ICML-specific expectations unless the user explicitly asks for them. Treat the review
-as venue-aware and calibrate the emphasis based on the paper type and likely submission venue.
+Treat the review as venue-aware and calibrate the emphasis based on the paper type and likely submission venue.
 
 ## SIGMOD / VLDB / ICDE
 
